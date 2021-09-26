@@ -4,9 +4,9 @@ const { userSchema } = require('../utils/UserSchema');
 
 const USER_CATEGORY = ["staff", "customer"]
 exports.params = async(req, res, next, id) => {
-    const user = await UserService.getUser(id);
+    const user = await UserService.getUserByUserId(id);
     if (!user) {
-        next(new Error(`no user with the phone number ${id}`));
+        next(new Error(`no user with the id number ${id}`));
     } else {
         req.user = user;
         next();
