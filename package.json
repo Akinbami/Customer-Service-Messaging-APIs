@@ -1,0 +1,27 @@
+{
+    "name": "cs-messagging",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "start": "node ./bin/www",
+        "dev": "nodemon ./bin/www",
+        "stage": "pm2 start ./bin/www --name cs-messaging-dev",
+        "serve": "pm2 start ./bin/www --name cs-messaging -i max",
+        "offline": "sls offline start --skipCacheInvalidation --printOutput"
+    },
+    "dependencies": {
+        "cookie-parser": "~1.4.4",
+        "cors": "^2.8.5",
+        "csv-parser": "^3.0.0",
+        "debug": "~2.6.9",
+        "dotenv": "^10.0.0",
+        "express": "~4.16.1",
+        "http-errors": "~1.6.3",
+        "jade": "~1.11.0",
+        "joi": "^17.4.2",
+        "mongoose": "^6.0.7",
+        "morgan": "~1.9.1",
+        "serverless-offline": "^8.2.0",
+        "uuid": "^8.3.2"
+    }
+}

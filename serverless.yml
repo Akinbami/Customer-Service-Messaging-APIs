@@ -1,0 +1,23 @@
+# serverless.yml
+
+service: cs-messaging-backend-api
+# configValidationMode: error
+
+plugins:
+  - serverless-offline
+  # - serverless-vpc-plugin
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: us-east-1
+  profile: "smartpy"
+
+functions:
+  app:
+    handler: index.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
+    # timeout: 45
+
