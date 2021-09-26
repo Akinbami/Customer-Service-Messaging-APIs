@@ -55,6 +55,7 @@ out/
 migrations/
 
 config/
+.serverless/
 
 .env
 GeneralistRails_Project_MessageData.csv
